@@ -3,7 +3,7 @@
  
  
 SET DEBUG=false
-SET VERBOSE=true
+SET VERBOSE=false
  
  
  
