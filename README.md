@@ -13,9 +13,9 @@ Basicaly, the script scans the `./input/` folder, processes each file and then o
 
 ## ffmpeg
 
-The script uses ffmpeg to do the processing. From there you have two options :
+The script uses [ffmpeg](https://www.ffmpeg.org/download.html#build-windows) to do the processing. From there you have two options :
 
-* Choose the right ffmpeg version depending on your system and put `ffmpeg.exe` in the same folder as the script.
+* Download the right ffmpeg version depending on your system and put `ffmpeg.exe` in the same folder as the script.
 * Download both ffmpeg x86 and x64, rename both ffmpeg.exe as `ffmpeg-x86.exe` and `ffmpeg-x64.exe` and put them in the same folder as the script. The script will then guess the right version depending on the host. This solution can be usefull if the script is hosted on a shared folder on the network, and is to be used on both x86 and x64 computers.
 
 ## Usage
