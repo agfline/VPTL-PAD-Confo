@@ -27,7 +27,7 @@ echo ***                             VPTL PAD Confo                             
 echo *******************************************************************************
 echo.
 echo    VPTL PAD Confo  permet de preparer des  fichiers  .mov  a  destination du
-echo    melangeur  du  VPTL,  en  ne  conservant  que  les  pistes audio  1 et 2.
+echo    melangeur  du  VPTL,  en  ne  conservant  que  les  flux   audio  1 et 2.
 echo.
 echo.
 echo    Utilisation :
