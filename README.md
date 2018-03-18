@@ -2,13 +2,13 @@
 
 This script is intended to prepare `.mov` files for BPix Granite video switchers, but **can be easily adapted to suit any need**.
 
-Basicaly, the script scans the `./input/` folder, processes each file and then outputs the converted file to the `./output/` folder.
+Basicaly, the script scans the `./input/` folder, processes each file and then outputs the converted files to the `./output/` folder.
 
 
 ## Features
 
 * Can be run from either a local or remote folder (UNC)
-* Can be used as a watch-folder daemon
+* Can be used as a watch-folder daemon (*untested*)
 * Can guess and chose between ffmpeg x86 or x64, depending on the host system
 
 ## ffmpeg
