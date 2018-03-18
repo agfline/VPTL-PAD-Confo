@@ -79,8 +79,16 @@ if %DEBUG%==true echo
 
 reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
-if %OS%==32BIT SET ffmpeg=%localPath%\res\ffmpeg-x86.exe
-if %OS%==64BIT SET ffmpeg=%localPath%\res\ffmpeg-x64.exe
+if exist "%localPath%\ffmpeg.exe" (
+
+  SET ffmpeg=%localPath%\ffmpeg.exe
+
+) else (
+
+  if %OS%==32BIT SET ffmpeg=%localPath%\ffmpeg-x86.exe
+  if %OS%==64BIT SET ffmpeg=%localPath%\ffmpeg-x64.exe
+
+)
 
 if %DEBUG%==true echo  ffmpeg    : %ffmpeg%
 
