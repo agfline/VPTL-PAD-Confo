@@ -98,13 +98,13 @@ if %DEBUG%==true echo  ffmpeg    : %ffmpeg%
 
 if %DEBUG%==true echo :loop
 
-if exist "%inputPath%\*.mov" (
+if exist "%inputPath%\*" (
 
-  if %DEBUG%==true echo if exist "%inputPath%\*.mov"
+  if %DEBUG%==true echo if exist "%inputPath%\*"
 
-  for %%a in ("%inputPath%\*.mov") do (
+  for %%a in ("%inputPath%\*") do (
 
-    if %DEBUG%==true echo for %%a in ^("%inputPath%\*.mov"^)
+    if %DEBUG%==true echo for %%a in ^("%inputPath%\*"^)
 
     set filename=%%~na
     set fileextension=%%~xa
@@ -113,15 +113,15 @@ if exist "%inputPath%\*.mov" (
     echo  [^>] processing : !filename!!fileextension!
 
 
-    if %DEBUG%==true echo "%ffmpeg%" -i "%inputPath%\!filename!!fileextension!" ^-map 0:v ^-map 0:a:0 ^-map 0:a:1 ^-c copy "%outputPath%\!filename!!fileextension!"
+    if %DEBUG%==true echo "%ffmpeg%" -i "%inputPath%\!filename!!fileextension!" ^-map 0:v ^-map 0:a:0 ^-map 0:a:1 ^-c copy "%outputPath%\!filename!.mov"
 
     if %VERBOSE%==true (
 
-      "%ffmpeg%" -i "%inputPath%\!filename!!fileextension!" -map 0:v -map 0:a:0 -map 0:a:1 -c copy "%outputPath%\!filename!!fileextension!"
+      "%ffmpeg%" -i "%inputPath%\!filename!!fileextension!" -map 0:v -map 0:a:0 -map 0:a:1 -c copy "%outputPath%\!filename!.mov"
 
     ) else (
 
-      "%ffmpeg%" -loglevel panic -i "%inputPath%\!filename!!fileextension!" -map 0:v -map 0:a:0 -map 0:a:1 -c copy "%outputPath%\!filename!!fileextension!"
+      "%ffmpeg%" -loglevel panic -i "%inputPath%\!filename!!fileextension!" -map 0:v -map 0:a:0 -map 0:a:1 -c copy "%outputPath%\!filename!.mov"
 
     )
 
